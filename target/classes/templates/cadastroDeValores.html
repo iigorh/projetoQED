@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+	crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="css/style.css">
+<title>Cadastro de despesa</title>
+</head>
+<body>
+	<header>
+<!-- navbar -->
+		<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/inicio"><img
+					src="https://upload.wikimedia.org/wikipedia/commons/2/20/EME.png"
+					width="50px"></a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" aria-current="page"
+							href="/inicio">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							href="/cadastroDespesa">Cadastrar QED</a></li>
+						<li><a class="nav-link" href="/lista">Visualizar QED</a>
+						</li>
+						<li class="nav-item"><a class="nav-link"
+							href="/editarListaDespesas">Editar QED</a></li>
+
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+<!-- navbar -->
+	</header>
+
+	<div class="container">
+	
+
+	
+		<div class="textoInicio">
+			<h1>Quadro Estimativo de Despesas</h1>
+			<h7>Preencha abaixo os valores estimados em dólar. Caso preencha com incorreção<br> poderá 
+			acessar a página <a href="/editarListaDespesas">EDITAR QED</a> na barra de navegação acima e editar.</h7>
+		</div>
+		
+		
+		
+		<!-- FORMULÁRIO DE CADASTRO -->
+		<form class="cadastro" action="#"th:action="@{cadastrarDespesa}"
+			th:object="${despesas}" method="POST">
+			<!-- campo de seleção da ND -->
+			<label for="ND">Selecione a ND:</label> <select class="form-select"
+				name="categoria" required>
+				<option selected required></option>
+				<option value="30">33.90.30</option>
+				<option value="33">33.90.33</option>
+				<option value="36">33.90.36</option>
+				<option value="39">33.90.39</option>
+				<option value="40">33.90.40</option>
+				<option value="52">33.90.52</option>
+				<option value="04">31.90.04</option>
+			</select>
+
+			<!-- campos para valores mensais -->
+			<div class="mb-3">
+				<label for="valorJan" class="form-label">Janeiro:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="jan" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Fevereiro:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">MArço:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Abril:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Maio:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Junho:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Julho:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Agosto:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Setembro:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Outubro:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Novembro:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			<div class="mb-3">
+				<label for="valorFev" class="form-label">Dezembro:</label> <input
+					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
+					step="0.01" min="0.01" name="fev" required>
+			</div>
+			
+
+			<div class="botaocadastrar">
+				<button type="submit" class="botaoCadastrar">Cadastrar</button>
+			</div>
+		</form>
+		<!-- FORMULÁRIO DE CADASTRO -->	
+			
+			
+
+</div>
+
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+			crossorigin="anonymous"></script>
+
+	</div>
+</body>
+</html>
