@@ -56,50 +56,60 @@
 		</div>
 
 		<table class="table table-dark table-striped table-hover">
-			<thead>
-				<tr>
-					<th scope="col">Aditância</th>
-					<th scope="col">ND 04</th>
-					<th scope="col">ND 30</th>
-					<th scope="col">ND 33</th>
-					<th scope="col">ND 36</th>
-					<th scope="col">ND 39</th>
-					<th scope="col">ND 40</th>
-					<th scope="col">ND 52</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="despesa : ${despesas}">
-				<td th:text="'R$ ' + ${despesa.fev}"></td>
-<!-- 					<td th:text="${despesa.categoria}"></td> -->
-<!-- 					<td th:text="${{despesa.data}}"></td> -->
-					<td th:text="'R$ ' + ${despesa.jan}"></td>
-<!-- 					<td th:text="'R$ ' + ${despesa.valor}"></td> -->
-<!-- 					<td th:text="'R$ ' + ${despesa.valor}"></td> -->
-<!-- 					<td th:text="'R$ ' + ${despesa.valor}"></td> -->
-				</tr>
-			</tbody>
-
-			<tfoot>
-			
-			<tr>
-			<td >Total:</td>
-			<td th:text="'R$ ' + ${valorTotal}"></td>
-			<td th:text="'R$ ' + ${valorTotal}"></td>
-			<td th:text="'R$ ' + ${valorTotal}"></td>
-			<td th:text="'R$ ' + ${valorTotal}"></td>
-			<td th:text="'R$ ' + ${valorTotal}"></td>
-			<td th:text="'R$ ' + ${valorTotal}"></td>
-			<td th:text="'R$ ' + ${valorTotal}"></td>
-			<td></td>
-			</tr>
-		
-				<tr>
-					<td colspan="1">Total:</td>
-					<td colspan="6" th:text="'R$ ' + ${valorTotal}"></td>
-					<td></td>
-				</tr>
-			</tfoot>
+		<thead>
+	    <tr>
+	        <th scope="col">Categoria</th>
+	        <th scope="col">Janeiro</th>
+	        <th scope="col">Fevereiro</th>
+	        <th scope="col">Março</th>
+	        <th scope="col">Abril</th>
+	        <th scope="col">Maio</th>
+	        <th scope="col">Junho</th>
+	        <th scope="col">Julho</th>
+	        <th scope="col">Agosto</th>
+	        <th scope="col">Setembro</th>
+	        <th scope="col">Outubro</th>
+	        <th scope="col">Novembro</th>
+	        <th scope="col">Dezembro</th>
+	    </tr>
+	</thead>
+	<tbody>
+	    <!-- Use Thymeleaf para iterar sobre as categorias e valores -->
+	    <tr th:each="categoria, index : ${categorias}">
+	        <td th:text="${categoria}"></td>
+	        <!-- Use Thymeleaf para exibir os totais de janeiro a dezembro -->
+	        <td th:text="${valoresJaneiro[__${index.index}__].jan_nd04}"></td>
+	        <td th:text="${valoresFevereiro[__${index.index}__].fev_nd04}"></td>
+	        <td th:text="${valoresMarco[__${index.index}__].mar_nd04}"></td>
+	        <td th:text="${valoresAbril[__${index.index}__].abr_nd04}"></td>
+	        <td th:text="${valoresMaio[__${index.index}__].mai_nd04}"></td>
+	        <td th:text="${valoresJunho[__${index.index}__].jun_nd04}"></td>
+	        <td th:text="${valoresJulho[__${index.index}__].jul_nd04}"></td>
+	        <td th:text="${valoresAgosto[__${index.index}__].ago_nd04}"></td>
+	        <td th:text="${valoresSetembro[__${index.index}__].sett_nd04}"></td>
+	        <td th:text="${valoresOutubro[__${index.index}__].out_nd04}"></td>
+	        <td th:text="${valoresNovembro[__${index.index}__].nov_nd04}"></td>
+	        <td th:text="${valoresDezembro[__${index.index}__].dez_nd04}"></td>
+	    </tr>
+	</tbody>
+	<tfoot>
+	    <tr>
+	        <td>Total:</td>
+	        <!-- Use Thymeleaf para exibir os totais de janeiro a dezembro -->
+	        <td th:text="'R$ ' + ${valorTotalJaneiro}"></td>
+	        <td th:text="'R$ ' + ${valorTotalFevereiro}"></td>
+	        <td th:text="'R$ ' + ${valorTotalMarco}"></td>
+	        <td th:text="'R$ ' + ${valorTotalAbril}"></td>
+	        <td th:text="'R$ ' + ${valorTotalMaio}"></td>
+	        <td th:text="'R$ ' + ${valorTotalJunho}"></td>
+	        <td th:text="'R$ ' + ${valorTotalJulho}"></td>
+	        <td th:text="'R$ ' + ${valorTotalAgosto}"></td>
+	        <td th:text="'R$ ' + ${valorTotalSetembro}"></td>
+	        <td th:text="'R$ ' + ${valorTotalOutubro}"></td>
+	        <td th:text="'R$ ' + ${valorTotalNovembro}"></td>
+	        <td th:text="'R$ ' + ${valorTotalDezembro}"></td>
+	    </tr>
+	</tfoot>
 
 		</table>
 

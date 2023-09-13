@@ -43,29 +43,36 @@ public class DespesasController {
 	List<Despesas> despesas = repositorio.findAll();
 	model.addAttribute("despesas", despesas);
 	
+	// Calcular o valor total para cada categoria (ND04, ND30, ND33, ND36, ND39, ND40, ND52) em todos os meses (janeiro a dezembro)
+	double valorTotalJaneiro = despesas.stream()
+	    .mapToDouble(despesa -> despesa.getJan_nd04() + despesa.getJan_nd30() + despesa.getJan_nd33() + despesa.getJan_nd36() +
+	                         despesa.getJan_nd39() + despesa.getJan_nd40() + despesa.getJan_nd52())
+	    .sum();
+
+	double valorTotalFevereiro = despesas.stream()
+	    .mapToDouble(despesa -> despesa.getFev_nd04() + despesa.getFev_nd30() + despesa.getFev_nd33() + despesa.getFev_nd36() +
+	                         despesa.getFev_nd39() + despesa.getFev_nd40() + despesa.getFev_nd52())
+	    .sum();
+
+	double valorTotalMarco = despesas.stream()
+	    .mapToDouble(despesa -> despesa.getMar_nd04() + despesa.getMar_nd30() + despesa.getMar_nd33() + despesa.getMar_nd36() +
+	                         despesa.getMar_nd39() + despesa.getMar_nd40() + despesa.getMar_nd52())
+	    .sum();
+
+	double valorTotalAbril = despesas.stream()
+		    .mapToDouble(despesa -> despesa.getAbr_nd04() + despesa.getAbr_nd30() + despesa.getAbr_nd33() + despesa.getAbr_nd36() +
+		                         despesa.getAbr_nd39() + despesa.getAbr_nd40() + despesa.getAbr_nd52())
+		    .sum();
+
+    
+
+	
 // Calcular o valor total das despesas
 	double valorTotal = despesas.stream().mapToDouble(Despesas::getValor).sum();
 	model.addAttribute("valorTotal", valorTotal);
 	return "lista";	
 		}		
-	
-//// pagina de cadastroDes
-//	@GetMapping("/cadastroDespesa")
-//	public String cadastrar() {
-//	return "cadastro.html";
-//		}
-//	
-////metodo para cadastrar despesa	
-//		@PostMapping("/cadastrarDespesa")
-//		public String cadastraProduto(Despesas despesas,
-//		BindingResult result, Model model) 
-//			{
-//		if(result.hasErrors()) {
-//		return "/cadastro.html";
-//			}
-//		repositorio.save(despesas);
-//		return "redirect:/cadastroDespesa";
-//		}		
+		
 	
 	
 	// pagina de cadastro
@@ -73,21 +80,21 @@ public class DespesasController {
 	public String cadastrarv() {
 	return "cadastroDeValores.html";
 		}
+	
 //metodo para cadastrar qed	
 	@PostMapping("/cadastrarDespesa")
-	public String cadastroQed(Despesas despesas,
+	public String cadastroDespesa(@ModelAttibute Despesas despesas,
 	BindingResult result, Model model) 
 		{
 	if(result.hasErrors()) {
-	return "/cadastro.html";
+	return "/cadastroDeValores";
 		}
+	
+	
 	repositorio.save(despesas);
 	return "cadastroDeValores.html";
 	}	
-	
-
-
-	
+		
 		
 //metodo p EDITAR lista despesas
 	@GetMapping("/editarListaDespesas")
