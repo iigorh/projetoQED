@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
   font-family: 'Poppins', sans-serif;
   color: #ededed;
 }
+
 
 body {
   display: flex;
@@ -27,9 +29,12 @@ background-color:#252526;
   border-radius: 50px;
   padding: 40px;
   margin-top: 250px;
-  width: 80%; 
+  width: 100%; 
   height: 450px; 
   color: #fff;
+  margin-left: 0;
+  margin-right: 0 ;
+
 }
 
 
@@ -52,9 +57,9 @@ background-color:#2d2d30;
   cursor: pointer;
   text-align: center; 
   margin-top:100px;
-  font-weight: bold;
-  
+  font-weight: bold; 
 }
+
 
 .textoInicio{ 
   margin-top: -200px;
@@ -64,22 +69,74 @@ background-color:#2d2d30;
 
 
 /*formulario CADASTRO*/
-.cadastro{
+.cadastro_nd04{
   border-radius: 30px;
   text-align: left;
-  position: relative;
-  top: 170%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: #2d2d30;
-  width: 800px;
+  width: 175px;
   padding: 10px 20px;
 }
 /*fim formulario CADASTRO*/
 
-.form-select option{
-	color: #2d2d30;
+/*formulario CADASTRO*/
+.cadastro_nd30{
+  border-radius: 30px;
+  text-align: left;
+  background-color: #2d2d30;
+  width: 175px;
+  padding: 10px 20px;
 }
+/*fim formulario CADASTRO*/
+
+/*formulario CADASTRO*/
+.cadastro_nd33{
+  border-radius: 30px;
+  text-align: left;
+  background-color: #2d2d30;
+  width: 175px;
+  padding: 10px 20px;
+}
+/*fim formulario CADASTRO*/
+
+/*formulario CADASTRO*/
+.cadastro_nd36{
+  border-radius: 30px;
+  text-align: left;
+  background-color: #2d2d30;
+  width: 175px;
+  padding: 10px 20px;
+}
+/*fim formulario CADASTRO*/
+
+/*formulario CADASTRO*/
+.cadastro_nd39{
+  border-radius: 30px;
+  text-align: left;
+  background-color: #2d2d30;
+  width: 175px;
+  padding: 10px 20px;
+}
+/*fim formulario CADASTRO*/
+
+/*formulario CADASTRO*/
+.cadastro_nd40{
+  border-radius: 30px;
+  text-align: left;
+  background-color: #2d2d30;
+  width: 175px;
+  padding: 10px 20px;
+}
+/*fim formulario CADASTRO*/
+
+/*formulario CADASTRO*/
+.cadastro_nd52{
+  border-radius: 30px;
+  text-align: left;
+  background-color: #2d2d30;
+  width: 175px;
+  padding: 10px 20px;
+}
+/*fim formulario CADASTRO*/
 
 .botaoCadastrar{
   background-color: #39ff14; 
@@ -121,6 +178,18 @@ table {
   text-align: center;
   }
   
+.form-container {
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+	margin-left: 0;
+	margin-right: 0;
+	gap: 15px;
+	
+}
+
+
+
 
 
 
