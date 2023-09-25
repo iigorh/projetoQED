@@ -77,11 +77,13 @@
 	
 	
 	<tbody>
-	   
-	    <tr>
+	
+		
+	
+	    <tr th:each="despesa : ${despesas}">
 	    	<td>31.90.04</td>
-	        <td th:text="${valorJan04[0]}"></td>
-	        <td th:text="${valorFev04[0]}"></td>
+	    	<td th:text="${despesa.jan_nd04 + despesa.jan_nd30 + despesa.jan_nd33 + despesa.jan_nd36 + despesa.jan_nd39 + despesa.jan_nd40 + despesa.jan_nd52}"></td>
+	    	<td th:text="${despesa.fev_nd04 + despesa.fev_nd30 + despesa.fev_nd33 + despesa.fev_nd36 + despesa.fev_nd39 + despesa.fev_nd40 + despesa.fev_nd52}"></td>
 	        <td th:text="${valorMar04[0]}"></td>
 	        <td th:text="${valorAbr04[0]}"></td>
 	        <td th:text="${valorMai04[0]}"></td>
@@ -95,47 +97,24 @@
 	    </tr>
 	</tbody>
 	
-	<tbody>
-	   
-    <tr>
-    	<td>33.90.30</td>
-        <td th:text="${valorJan30[0]}"></td>
-        <td th:text="${valorFev30[0]}"></td>
-        <td th:text="${valorMar30[0]}"></td>
-        <td th:text="${valorAbr30[0]}"></td>
-        <td th:text="${valorMai30[0]}"></td>
-        <td th:text="${valorJun30[0]}"></td>
-        <td th:text="${valorJul30[0]}"></td>
-        <td th:text="${valorAgo30[0]}"></td>
-        <td th:text="${valorSet30[0]}"></td>
-        <td th:text="${valorOut30[0]}"></td>
-        <td th:text="${valorNov30[0]}"></td>
-        <td th:text="${valorDez30[0]}"></td>
-   
-    </tr>
-</tbody>
-	
-	
-	
-	
 	
 	
 	
 	<tfoot>
 	    <tr>
 	        <td>Total:</td>
-	        <td th:text="'R$ ' + ${valorTotalJaneiro}"></td>
-	        <td th:text="'R$ ' + ${valorTotalFevereiro}"></td>
-	        <td th:text="'R$ ' + ${valorTotalMarco}"></td>
-	        <td th:text="'R$ ' + ${valorTotalAbril}"></td>
-	        <td th:text="'R$ ' + ${valorTotalMaio}"></td>
-	        <td th:text="'R$ ' + ${valorTotalJunho}"></td>
-	        <td th:text="'R$ ' + ${valorTotalJulho}"></td>
-	        <td th:text="'R$ ' + ${valorTotalAgosto}"></td>
-	        <td th:text="'R$ ' + ${valorTotalSetembro}"></td>
-	        <td th:text="'R$ ' + ${valorTotalOutubro}"></td>
-	        <td th:text="'R$ ' + ${valorTotalNovembro}"></td>
-	        <td th:text="'R$ ' + ${valorTotalDezembro}"></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
+	        <td th:text=""></td>
 	    </tr>
 	</tfoot>
 
