@@ -81,42 +81,26 @@
 		
 	
 	    <tr th:each="despesa : ${despesas}">
-	    	<td>31.90.04</td>
+	    	<td th:text="${despesa.nd}"></td>
 	    	<td th:text="${despesa.jan_nd04 + despesa.jan_nd30 + despesa.jan_nd33 + despesa.jan_nd36 + despesa.jan_nd39 + despesa.jan_nd40 + despesa.jan_nd52}"></td>
 	    	<td th:text="${despesa.fev_nd04 + despesa.fev_nd30 + despesa.fev_nd33 + despesa.fev_nd36 + despesa.fev_nd39 + despesa.fev_nd40 + despesa.fev_nd52}"></td>
-	        <td th:text="${valorMar04[0]}"></td>
-	        <td th:text="${valorAbr04[0]}"></td>
-	        <td th:text="${valorMai04[0]}"></td>
-	        <td th:text="${valorJun04[0]}"></td>
-	        <td th:text="${valorJul04[0]}"></td>
-	        <td th:text="${valorAgo04[0]}"></td>
-	        <td th:text="${valorSet04[0]}"></td>
-	        <td th:text="${valorOut04[0]}"></td>
-	        <td th:text="${valorNov04[0]}"></td>
-	        <td th:text="${valorDez04[0]}"></td>
+	    	<td th:text="${despesa.mar_nd04 + despesa.mar_nd30 + despesa.mar_nd33 + despesa.mar_nd36 + despesa.mar_nd39 + despesa.mar_nd40 + despesa.mar_nd52}"></td>
+	    	<td th:text="${despesa.abr_nd04 + despesa.abr_nd30 + despesa.abr_nd33 + despesa.abr_nd36 + despesa.abr_nd39 + despesa.abr_nd40 + despesa.abr_nd52}"></td>
+	    	<td th:text="${despesa.mai_nd04 + despesa.mai_nd30 + despesa.mai_nd33 + despesa.mai_nd36 + despesa.mai_nd39 + despesa.mai_nd40 + despesa.mai_nd52}"></td>
+	    	<td th:text="${despesa.jun_nd04 + despesa.jun_nd30 + despesa.jun_nd33 + despesa.jun_nd36 + despesa.jun_nd39 + despesa.jun_nd40 + despesa.jun_nd52}"></td>
+	    	<td th:text="${despesa.jul_nd04 + despesa.jul_nd30 + despesa.jul_nd33 + despesa.jul_nd36 + despesa.jul_nd39 + despesa.jul_nd40 + despesa.jul_nd52}"></td>
+	    	<td th:text="${despesa.ago_nd04 + despesa.ago_nd30 + despesa.ago_nd33 + despesa.ago_nd36 + despesa.ago_nd39 + despesa.ago_nd40 + despesa.ago_nd52}"></td>
+	    	<td th:text="${despesa.set_nd04 + despesa.set_nd30 + despesa.set_nd33 + despesa.set_nd36 + despesa.set_nd39 + despesa.set_nd40 + despesa.set_nd52}"></td>
+	    	<td th:text="${despesa.out_nd04 + despesa.out_nd30 + despesa.out_nd33 + despesa.out_nd36 + despesa.out_nd39 + despesa.out_nd40 + despesa.out_nd52}"></td>
+	    	<td th:text="${despesa.nov_nd04 + despesa.nov_nd30 + despesa.nov_nd33 + despesa.nov_nd36 + despesa.nov_nd39 + despesa.nov_nd40 + despesa.nov_nd52}"></td>
+	    	<td th:text="${despesa.dez_nd04 + despesa.dez_nd30 + despesa.dez_nd33 + despesa.dez_nd36 + despesa.dez_nd39 + despesa.dez_nd40 + despesa.dez_nd52}"></td>
 	    </tr>
 	</tbody>
 	
 	
 	
 	
-	<tfoot>
-	    <tr>
-	        <td>Total:</td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	        <td th:text=""></td>
-	    </tr>
-	</tfoot>
+
 
 		</table>
 
