@@ -43,7 +43,7 @@ public class WebSecurityConfig{
 	    public void configure(HttpSecurity http) throws Exception {
 	      
 	    	http
-
+	   
 	    		   .authorizeHttpRequests(auth -> auth
 	        		.requestMatchers("/").hasAnyAuthority("USER", "CREATOR", "EDITOR", "ADMIN")
 	                .requestMatchers("/new").hasAnyAuthority("ADMIN", "CREATOR")
@@ -53,14 +53,16 @@ public class WebSecurityConfig{
 	                .anyRequest().authenticated()
 	                        )
 	    		   
-	    		   .httpBasic()
-	    		   .and()
+	    		 
 	                .formLogin().permitAll()
 	                .and()
 	                .logout().permitAll()
 	                .and()
 	        		.exceptionHandling().accessDeniedPage("/403")
 	               ;
+	    	
+	    	http.csrf().disable();
+	    	http.headers().frameOptions().disable();
 
 	               
 	    }

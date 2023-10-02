@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,10 +56,19 @@
 	<h4>Para prosseguir navegue no menu acima, <br> ou clique no botão abaixo para cadastrar uma nova despesa.</h4>
 	
 	
+	<div sec:authorize="isAuthenticated()">
+	Bem Vindo"<b><span sec:authentication="name">Username</span></b> &nbsp;"
+			"<i><span sex:authentication="principal.authorities">Roles</span></i>
+	
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="logout" />
+		</form>
+	<div sec:authorize="hasAnyAuthority('CREATOR, 'ADMIN')">
 	<div class="botaoCadastrar1">
 	<a href="/cadastro" class="botaoCadastrar1">Cadastrar nova despesa</a>
 	</div>
-
+	
+	
 	</div>
 
 </body>
