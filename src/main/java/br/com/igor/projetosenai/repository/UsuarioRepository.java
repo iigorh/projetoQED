@@ -8,7 +8,7 @@ import br.com.igor.projetosenai.model.User;
 
 public interface UsuarioRepository extends Repository<User, Long> {
 
-	@Query("SELEC u from User u Where u.username = : username")
+	@Query("SELECT u from User u Where u.username = : username")
 	public User getUserByUsername(@Param("username") String username);
 	
 	
