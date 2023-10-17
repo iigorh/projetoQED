@@ -83,9 +83,21 @@
 	    	<td th:text="${despesa.jan_nd40}"></td>
 	    	<td th:text="${despesa.jan_nd52}"></td>
 	    	
-
-	    	
 	</tbody>
+	
+	<tbody>
+    <tr th:each="despesa : ${despesas}">
+    	<td>ÁFRICA DO SUL</td>
+    	<td th:text="${despesa.fev_nd04}"></td>
+    	<td th:text="${despesa.fev_nd30}"></td>
+    	<td th:text="${despesa.fev_nd33}"></td>
+    	<td th:text="${despesa.fev_nd36}"></td>
+    	<td th:text="${despesa.fev_nd39}"></td>
+    	<td th:text="${despesa.fev_nd40}"></td>
+    	<td th:text="${despesa.fev_nd52}"></td>
+    	
+</tbody>
+	
 	
 		</table>
 

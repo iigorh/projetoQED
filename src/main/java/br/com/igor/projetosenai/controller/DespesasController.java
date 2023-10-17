@@ -187,14 +187,7 @@ public class DespesasController {
 		return "redirect:/editarListaDespesas";
 	}	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 //	pagina inicial
