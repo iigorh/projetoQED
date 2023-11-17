@@ -73,6 +73,26 @@
 	</thead>
 	
 	
+	<select id="mesSelecionado" onchange="filtrarMes()">
+		<option value="t1">1º Trimestre</option>
+		<option value="t2">2º Trimestre</option>
+		<option value="t3">3º Trimestre</option>
+		<option value="t4">4º Trimestre</option>
+    	<option value="jan">Janeiro</option>
+    	<option value="fev">Fevereiro</option>
+    	<option value="mar">Março</option>
+    	<option value="abr">Abril</option>
+    	<option value="mai">Maio</option>
+    	<option value="jun">Junho</option>
+    	<option value="jul">Julho</option>
+    	<option value="ago">Agosto</option>
+    	<option value="set">Setembro</option>
+    	<option value="out">Outubro</option>
+    	<option value="nov">Novembro</option>
+    	<option value="dez">Dezembro</option>
+    	
+    
+    </select>
     
     
 		<tbody>
@@ -126,7 +146,7 @@
 	</tbody>
 
 	<tbody>
-	<tr th:each="despesa : ${despesas}">
+	<tr class="mai" th:each="despesa : ${despesas}">
 		<td>ÁFRICA DO SUL</td>
 		<td th:text="${despesa.mai_nd04}"></td>
 		<td th:text="${despesa.mai_nd30}"></td>
@@ -139,7 +159,7 @@
 	</tbody>
 	
 	<tbody>
-	<tr th:each="despesa : ${despesas}">
+	<tr class="jun" th:each="despesa : ${despesas}">
 		<td>ÁFRICA DO SUL</td>
 		<td th:text="${despesa.jun_nd04}"></td>
 		<td th:text="${despesa.jun_nd30}"></td>
@@ -152,7 +172,7 @@
 	</tbody>
 	
 	<tbody>
-	<tr th:each="despesa : ${despesas}">
+	<tr class="jul" th:each="despesa : ${despesas}">
 		<td>ÁFRICA DO SUL</td>
 		<td th:text="${despesa.jul_nd04}"></td>
 		<td th:text="${despesa.jul_nd30}"></td>
@@ -165,7 +185,7 @@
 	</tbody>
 	
 	<tbody>
-	<tr th:each="despesa : ${despesas}">
+	<tr class="ago" th:each="despesa : ${despesas}">
 		<td>ÁFRICA DO SUL</td>
 		<td th:text="${despesa.ago_nd04}"></td>
 		<td th:text="${despesa.ago_nd30}"></td>
@@ -178,7 +198,7 @@
 	</tbody>
 	
 	<tbody>
-	<tr th:each="despesa : ${despesas}">
+	<tr class="set" th:each="despesa : ${despesas}">
 		<td>ÁFRICA DO SUL</td>
 		<td th:text="${despesa.set_nd04}"></td>
 		<td th:text="${despesa.set_nd30}"></td>
@@ -191,7 +211,7 @@
 	</tbody>
 	
 	<tbody>
-	<tr th:each="despesa : ${despesas}">
+	<tr class="out" th:each="despesa : ${despesas}">
 		<td>ÁFRICA DO SUL</td>
 		<td th:text="${despesa.out_nd04}"></td>
 		<td th:text="${despesa.out_nd30}"></td>
@@ -204,7 +224,7 @@
 	</tbody>
 	
 	<tbody>
-	<tr th:each="despesa : ${despesas}">
+	<tr class="nov" th:each="despesa : ${despesas}">
 		<td>ÁFRICA DO SUL</td>
 		<td th:text="${despesa.nov_nd04}"></td>
 		<td th:text="${despesa.nov_nd30}"></td>
@@ -217,7 +237,7 @@
 	</tbody>
 	
 	<tbody>
-	<tr th:each="despesa : ${despesas}">
+	<tr class="dez" th:each="despesa : ${despesas}">
 		<td>ÁFRICA DO SUL</td>
 		<td th:text="${despesa.dez_nd04}"></td>
 		<td th:text="${despesa.dez_nd30}"></td>
@@ -235,7 +255,38 @@
 	</div>
 	<script src="https://kit.fontawesome.com/85e3e5acdc.js" crossorigin="anonymous"></script>
 	
+	<script>
+    function filtrarMes() {
+        var mesSelecionado = document.getElementById("mesSelecionado").value;
 
+        // Oculta todas as linhas da tabela
+        document.querySelectorAll("tbody tr").forEach(function (row) {
+            row.style.display = "none";
+        });
+
+        // Exibe as linhas correspondentes ao mês ou trimestre selecionado
+        if (mesSelecionado.startsWith("t")) {
+            // Caso seja um trimestre, calcula a soma dos meses correspondentes
+            var trimestre = parseInt(mesSelecionado.charAt(1));
+            for (var i = (trimestre - 1) * 3 + 1; i <= trimestre * 3; i++) {
+                document.querySelectorAll("tbody tr." + getNomeMes(i)).forEach(function (row) {
+                    row.style.display = "";
+                });
+            }
+        } else {
+            // Caso seja um mês, exibe a linha correspondente ao mês
+            document.querySelectorAll("tbody tr." + mesSelecionado).forEach(function (row) {
+                row.style.display = "";
+            });
+        }
+    }
+
+    function getNomeMes(numero) {
+        // Função auxiliar para obter o nome do mês a partir do número (1 a 12)
+        var meses = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+        return meses[numero - 1];
+    }
+</script>
 
 </body>
 </html>
