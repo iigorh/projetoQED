@@ -62,7 +62,12 @@ background-color:#2d2d30;
   left: 25% ;
 }
 
-
+.filtro{
+	background-color: #2d2d30;
+	color: #fff;
+	border-radius: 5px;
+	font-weight: bold;
+}
 
 /*formulario CADASTRO*/
 .cadastro{
