@@ -9,14 +9,17 @@
 	rel="stylesheet"
 	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
 	crossorigin="anonymous">
-
-
 <link rel="stylesheet" href="css/style.css">
-<title>Cadastro de despesa</title>
+
+
+<title>Cadastro QED</title>
 </head>
+
+
 <body>
+
+
 	<header>
-<!-- navbar -->
 		<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="/inicio"><img
@@ -38,104 +41,81 @@
 						</li>
 						<li class="nav-item"><a class="nav-link"
 							href="/editarListaDespesas">Editar QED</a></li>
-
-
 					</ul>
 				</div>
 			</div>
 		</nav>
-
 	</header>
+	
+	
+	
 
 	<div class="container">
-	
 
-	
 		<div class="textoInicio">
 			<h1>Quadro Estimativo de Despesas</h1>
-			<h7>Preencha abaixo os valores estimados em dólar. Caso preencha com incorreção<br> poderá 
-			acessar a página <a href="/editarListaDespesas">EDITAR QED</a> na barra de navegação acima e editar.</h7>
+			<h7>Preencha abaixo em todos os campos os valores estimados em dólar e ao fim da página <br>haverá um botão para cadastrar o QED preenchido. Caso preencha com incorreção poderá 
+			<br>acessar ao fim da página o botão para editar.</h7>
 		</div>
 		
 		
 		
-		<div class="form-container">
-		
-		<!-- FORMULÁRIO DE CADASTRO -->
+		<div class="cadastro">
 		<form class="" action="#"th:action="@{cadastrarDespesa}"
 			th:object="${despesas}" method="POST" id="formulario_nd04">
 			
+		
+		
 			<h1>JANEIRO</h1>
-			
-
-			
 			<div class="row">
 			 <div class="col-md-1 mb-3">
 		        <label for="valorjan" class="form-label">31.90.04:</label>
-		        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="jan_nd04" required>
+		        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="jan_nd04" >
 		    </div>
-		    
-		    
-		    
 			<div class="col-md-1 mb-3">
 				<label for="valorFev" class="form-label">33.90.30:</label> <input
 					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
-					step="0.01" min="0.01" name="jan_nd30" required>
+					step="0.01" min="0.01" name="jan_nd30" >
 			</div>
-			
 			<div class="col-md-1 mb-3">
 				<label for="valorMar" class="form-label">33.90.33:</label> <input
 					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
-					step="0.01" min="0.01" name="jan_nd33" required>
+					step="0.01" min="0.01" name="jan_nd33" >
 			</div>
 			<div class="col-md-1 mb-3">
 				<label for="valorAbr" class="form-label">33.90.36:</label> <input
 					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
-					step="0.01" min="0.01" name="jan_nd36" required>
+					step="0.01" min="0.01" name="jan_nd36" >
 			</div>
 			<div class="col-md-1 mb-3">
 				<label for="valorMai" class="form-label">33.90.39:</label> <input
 					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
-					step="0.01" min="0.01" name="jan_nd39" required>
+					step="0.01" min="0.01" name="jan_nd39">
 			</div>
 			<div class="col-md-1 mb-3">
 				<label for="valorJun" class="form-label">33.90.40:</label> <input
 					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
-					step="0.01" min="0.01" name="jan_nd40" required>
+					step="0.01" min="0.01" name="jan_nd40">
 			</div>
 			<div class="col-md-1 mb-3">
 				<label for="valorJul" class="form-label">44.90.52:</label> <input
 					type="number" lang="pt-BR" placeholder="0.00" class="form-control"
-					step="0.01" min="0.01" name="jan_nd52" required>
+					step="0.01" min="0.01" name="jan_nd52">
 			</div>
-			
-			
-			<div class="col-md-4 mb-3">
-				<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-				<button type="" class="btn btn-danger" >Editar</button>
-		    </div>
-
-		   </div> 
-			
-		
 		<br> 
-		<h1>FEVEREIRO</h1>
-
 		
-		<div class="row">
+		
+		
+		<h1>FEVEREIRO</h1>
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label">31.90.04:</label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="fev_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label">33.90.30:</label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="fev_nd30" required>
 		</div>
-		
 		<div class="col-md-1 mb-3">
 			<label for="valorMar" class="form-label">33.90.33:</label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -161,34 +141,20 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="fev_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
-	   </div> 
-	   
-	   
 	   <br> 
+	   
+	   
+	   
 		<h1>MARÇO</h1>
-
-		
-		<div class="row">
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="mar_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="mar_nd30" required>
 		</div>
-		
 		<div class="col-md-1 mb-3">
 			<label for="valorMar" class="form-label"><strong>33.90.33</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -214,28 +180,15 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="mar_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
+	   <br>
 
-	   </div> 
 	   
 	   
-	   <br> 
 		<h1>ABRIL</h1>
-
-		
-		<div class="row">
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="abr_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -267,36 +220,20 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="abr_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
-	   </div> 
-	   
-	    
-	   
-	   
 	   <br> 
+	   
+	   
+	   
 		<h1>MAIO</h1>
-
-		
-		<div class="row">
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="mai_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="mai_nd30" required>
 		</div>
-		
 		<div class="col-md-1 mb-3">
 			<label for="valorMar" class="form-label"><strong>33.90.33</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -322,34 +259,20 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="mai_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
-	   </div> 
-	   
-	   
 	   <br> 
+	   
+	   
+	   
 		<h1>JUNHO</h1>
-
-		
-		<div class="row">
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="jun_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="jun_nd30" required>
 		</div>
-		
 		<div class="col-md-1 mb-3">
 			<label for="valorMar" class="form-label"><strong>33.90.33</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -375,35 +298,20 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="jun_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
-	   </div> 
-	   
-	   
-	   
 	   <br> 
+	   
+	   
+	   
 		<h1>JULHO</h1>
-
-		
-		<div class="row">
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="jul_nd04" required>
-	    </div>
-	    
-	    
-	    
+	    </div>  
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="jul_nd30" required>
 		</div>
-		
 		<div class="col-md-1 mb-3">
 			<label for="valorMar" class="form-label"><strong>33.90.33</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -429,29 +337,15 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="jul_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
-	   </div> 
-	   
-	   
-	   
 	   <br> 
+	   
+	   
+	   
 		<h1>AGOSTO</h1>
-
-		
-		<div class="row">
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="ago_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -483,35 +377,20 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="ago_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
-	   </div> 
-	   
-	   
-	   
 	   <br> 
-		<h1>SETEMBRO</h1>
-
-		
-		<div class="row">
+	   
+	   
+	   
+		<h1>SETEMBRO</h1>	
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="set_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="set_nd30" required>
 		</div>
-		
 		<div class="col-md-1 mb-3">
 			<label for="valorMar" class="form-label"><strong>33.90.33</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -537,35 +416,20 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="set_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
-	   </div> 
-	   
-	   
-	   
 	   <br> 
+	   
+	   
+	   
 		<h1>OUTUBRO</h1>
-
-		
-		<div class="row">
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="out_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="out_nd30" required>
 		</div>
-		
 		<div class="col-md-1 mb-3">
 			<label for="valorMar" class="form-label"><strong>33.90.33</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -591,35 +455,20 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="out_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
-	   </div> 
-	   
-	   
-	   
 	   <br> 
+	   
+	   
+	   
 		<h1>NOVEMBRO</h1>
-
-		
-		<div class="row">
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="nov_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="nov_nd30" required>
 		</div>
-		
 		<div class="col-md-1 mb-3">
 			<label for="valorMar" class="form-label"><strong>33.90.33</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -645,35 +494,20 @@
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="nov_nd52" required>
 		</div>
-		
-		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
-	   </div> 
-	   
-	   
-	   
 	   <br> 
+	   
+	   
+	   
 		<h1>DEZEMBRO</h1>
-
-		
-		<div class="row">
 		 <div class="col-md-1 mb-3">
 	        <label for="valorjan" class="form-label"><strong>31.90.04</strong></label>
 	        <input type="number" lang="pt-BR" placeholder="0.00" class="form-control" step="0.01" min="0.01" name="dez_nd04" required>
 	    </div>
-	    
-	    
-	    
 		<div class="col-md-1 mb-3">
 			<label for="valorFev" class="form-label"><strong>33.90.30</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
 				step="0.01" min="0.01" name="dez_nd30" required>
 		</div>
-		
 		<div class="col-md-1 mb-3">
 			<label for="valorMar" class="form-label"><strong>33.90.33</strong></label> <input
 				type="number" lang="pt-BR" placeholder="0.00" class="form-control"
@@ -701,21 +535,15 @@
 		</div>
 		
 		
-		<div class="col-md-4 mb-3">
-			<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
-			<button type="" class="btn btn-danger" >Editar</button>
-	    </div>
-
+		
+	<div class="badas">
+		<button type="submit" class="botaoCadastrar" id="cadastro_nd04">Cadastrar</button>
+		<button type="" class="btn btn-danger" >Editar</button>
+    </div>
 	   </div> 
-	   
-	   
 	</form>	
 	
-	
-	
-	
-	
-	
+
 </div>
 		
 

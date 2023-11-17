@@ -9,20 +9,18 @@
 	rel="stylesheet"
 	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
 	crossorigin="anonymous">
-
 <link rel="stylesheet" href="css/style.css">
 
 
-<title>Lista de Despesas</title>
+
+<title>Visualizar</title>
 </head>
 
 <header>
-
-<!-- navbar -->
 	<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="/inicio"><img
-				src="https://images.emojiterra.com/google/android-12l/512px/1f4b2.png"
+				src="https://upload.wikimedia.org/wikipedia/commons/2/20/EME.png"
 				width="50px"></a>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -35,31 +33,34 @@
 					<li class="nav-item"><a class="nav-link " aria-current="page"
 						href="/inicio">Inicio</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/cadastro">Nova despesa</a></li>
+						href="/cadastro">Cadastrar QED</a></li>
 					<li><a class="nav-link active" href="/lista">Visualisar
-							Despesas</a></li>
+							QED</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/editarListaDespesas">Editar despesas</a></li>
+						href="/editarListaDespesas">Editar QED</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-<!-- navbar -->
 </header>
+
+
 
 
 <body>
 
+
 	<div class="containerLista">
+	
+	
 		<div class="cabecalhoTabelaEditar">
 			<strong>Despesas registradas:</strong>
 		</div>
-
-		
 		<table class="table table-dark table-striped table-hover">
+		
+		
 		<thead>
 	    <tr>
-	    
 	    	<td>Aditância</td>
 	        <th scope="col">31.90.04</th>
 	        <th scope="col">33.90.30</th>
@@ -68,12 +69,14 @@
 	        <th scope="col">33.90.39</th>
 	        <th scope="col">33.90.40</th>
 	        <th scope="col">44.90.52</th>
-
-	   
 	    </tr>
 	</thead>
-	<tbody>
-	    <tr th:each="despesa : ${despesas}">
+	
+	
+    
+    
+		<tbody>
+	    <tr class="jan" th:each="despesa : ${despesas}">
 	    	<td>ÁFRICA DO SUL</td>
 	    	<td th:text="${despesa.jan_nd04}"></td>
 	    	<td th:text="${despesa.jan_nd30}"></td>
@@ -82,26 +85,157 @@
 	    	<td th:text="${despesa.jan_nd39}"></td>
 	    	<td th:text="${despesa.jan_nd40}"></td>
 	    	<td th:text="${despesa.jan_nd52}"></td>
-	    	
+	    </tbody>
+	
+	    <tbody>
+	    <tr class="fev" th:each="despesa : ${despesas}">
+    		<td>ÁFRICA DO SUL</td>
+    		<td th:text="${despesa.fev_nd04}"></td>
+    		<td th:text="${despesa.fev_nd30}"></td>
+    		<td th:text="${despesa.fev_nd33}"></td>
+    		<td th:text="${despesa.fev_nd36}"></td>
+    		<td th:text="${despesa.fev_nd39}"></td>
+    		<td th:text="${despesa.fev_nd40}"></td>
+    		<td th:text="${despesa.fev_nd52}"></td>    	
+    		</tbody>
+
+	<tbody>
+	<tr class="mar" th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.mar_nd04}"></td>
+		<td th:text="${despesa.mar_nd30}"></td>
+		<td th:text="${despesa.mar_nd33}"></td>
+		<td th:text="${despesa.mar_nd36}"></td>
+		<td th:text="${despesa.mar_nd39}"></td>
+		<td th:text="${despesa.mar_nd40}"></td>
+		<td th:text="${despesa.mar_nd52}"></td>
+	
 	</tbody>
 	
 	<tbody>
-    <tr th:each="despesa : ${despesas}">
-    	<td>ÁFRICA DO SUL</td>
-    	<td th:text="${despesa.fev_nd04}"></td>
-    	<td th:text="${despesa.fev_nd30}"></td>
-    	<td th:text="${despesa.fev_nd33}"></td>
-    	<td th:text="${despesa.fev_nd36}"></td>
-    	<td th:text="${despesa.fev_nd39}"></td>
-    	<td th:text="${despesa.fev_nd40}"></td>
-    	<td th:text="${despesa.fev_nd52}"></td>
-    	
-</tbody>
+	<tr class="abr" th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.abr_nd04}"></td>
+		<td th:text="${despesa.abr_nd30}"></td>
+		<td th:text="${despesa.abr_nd33}"></td>
+		<td th:text="${despesa.abr_nd36}"></td>
+		<td th:text="${despesa.abr_nd39}"></td>
+		<td th:text="${despesa.abr_nd40}"></td>
+		<td th:text="${despesa.abr_nd52}"></td>
+		
+	</tbody>
+
+	<tbody>
+	<tr th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.mai_nd04}"></td>
+		<td th:text="${despesa.mai_nd30}"></td>
+		<td th:text="${despesa.mai_nd33}"></td>
+		<td th:text="${despesa.mai_nd36}"></td>
+		<td th:text="${despesa.mai_nd39}"></td>
+		<td th:text="${despesa.mai_nd40}"></td>
+		<td th:text="${despesa.mai_nd52}"></td>
+		
+	</tbody>
+	
+	<tbody>
+	<tr th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.jun_nd04}"></td>
+		<td th:text="${despesa.jun_nd30}"></td>
+		<td th:text="${despesa.jun_nd33}"></td>
+		<td th:text="${despesa.jun_nd36}"></td>
+		<td th:text="${despesa.jun_nd39}"></td>
+		<td th:text="${despesa.jun_nd40}"></td>
+		<td th:text="${despesa.jun_nd52}"></td>
+		
+	</tbody>
+	
+	<tbody>
+	<tr th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.jul_nd04}"></td>
+		<td th:text="${despesa.jul_nd30}"></td>
+		<td th:text="${despesa.jul_nd33}"></td>
+		<td th:text="${despesa.jul_nd36}"></td>
+		<td th:text="${despesa.jul_nd39}"></td>
+		<td th:text="${despesa.jul_nd40}"></td>
+		<td th:text="${despesa.jul_nd52}"></td>
+		
+	</tbody>
+	
+	<tbody>
+	<tr th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.ago_nd04}"></td>
+		<td th:text="${despesa.ago_nd30}"></td>
+		<td th:text="${despesa.ago_nd33}"></td>
+		<td th:text="${despesa.ago_nd36}"></td>
+		<td th:text="${despesa.ago_nd39}"></td>
+		<td th:text="${despesa.ago_nd40}"></td>
+		<td th:text="${despesa.ago_nd52}"></td>
+		
+	</tbody>
+	
+	<tbody>
+	<tr th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.set_nd04}"></td>
+		<td th:text="${despesa.set_nd30}"></td>
+		<td th:text="${despesa.set_nd33}"></td>
+		<td th:text="${despesa.set_nd36}"></td>
+		<td th:text="${despesa.set_nd39}"></td>
+		<td th:text="${despesa.set_nd40}"></td>
+		<td th:text="${despesa.set_nd52}"></td>
+		
+	</tbody>
+	
+	<tbody>
+	<tr th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.out_nd04}"></td>
+		<td th:text="${despesa.out_nd30}"></td>
+		<td th:text="${despesa.out_nd33}"></td>
+		<td th:text="${despesa.out_nd36}"></td>
+		<td th:text="${despesa.out_nd39}"></td>
+		<td th:text="${despesa.out_nd40}"></td>
+		<td th:text="${despesa.out_nd52}"></td>
+		
+	</tbody>
+	
+	<tbody>
+	<tr th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.nov_nd04}"></td>
+		<td th:text="${despesa.nov_nd30}"></td>
+		<td th:text="${despesa.nov_nd33}"></td>
+		<td th:text="${despesa.nov_nd36}"></td>
+		<td th:text="${despesa.nov_nd39}"></td>
+		<td th:text="${despesa.nov_nd40}"></td>
+		<td th:text="${despesa.nov_nd52}"></td>
+		
+	</tbody>
+	
+	<tbody>
+	<tr th:each="despesa : ${despesas}">
+		<td>ÁFRICA DO SUL</td>
+		<td th:text="${despesa.dez_nd04}"></td>
+		<td th:text="${despesa.dez_nd30}"></td>
+		<td th:text="${despesa.dez_nd33}"></td>
+		<td th:text="${despesa.dez_nd36}"></td>
+		<td th:text="${despesa.dez_nd39}"></td>
+		<td th:text="${despesa.dez_nd40}"></td>
+		<td th:text="${despesa.dez_nd52}"></td>
+		
+	</tbody>
 	
 	
 		</table>
 
 	</div>
 	<script src="https://kit.fontawesome.com/85e3e5acdc.js" crossorigin="anonymous"></script>
+	
+
+
 </body>
 </html>
