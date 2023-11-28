@@ -37,6 +37,18 @@ public class DespesasController {
 	List<Despesas> despesas = repositorio.findAll();
 	model.addAttribute("despesas", despesas);
 	
+	
+	
+	List<Double> valoresNd04 = new ArrayList<>();
+	List<Double> valoresNd30 = new ArrayList<>();
+	List<Double> valoresNd33 = new ArrayList<>();
+	List<Double> valoresNd36 = new ArrayList<>();
+	List<Double> valoresNd39 = new ArrayList<>();
+	List<Double> valoresNd40 = new ArrayList<>();
+	List<Double> valoresNd52 = new ArrayList<>();
+	
+	
+	
 	List<Double> valoresJaneiro = new ArrayList<>();
 	List<Double> valoresFevereiro = new ArrayList<>();
 	List<Double> valoresMarco = new ArrayList<>();
@@ -109,8 +121,12 @@ public class DespesasController {
 			   valoresDezembro.add(despesa.getDez_nd04() + despesa.getDez_nd30() + despesa.getDez_nd33() + despesa.getDez_nd36() +
 				 despesa.getDez_nd39() + despesa.getDez_nd40() + despesa.getDez_nd52());
 	}
-			
+	
+	
+	 
 	return "lista";
+			
+	
 	}
 	
 	
