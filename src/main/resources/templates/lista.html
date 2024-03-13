@@ -69,6 +69,7 @@
 	        <th scope="col">33.90.39</th>
 	        <th scope="col">33.90.40</th>
 	        <th scope="col">44.90.52</th>
+	        <th scope="col">Total mês</th>
 	    </tr>
 	</thead>
 	
@@ -106,6 +107,8 @@
 	    	<td th:text="${despesa.jan_nd39}"></td>
 	    	<td th:text="${despesa.jan_nd40}"></td>
 	    	<td th:text="${despesa.jan_nd52}"></td>
+	    	<td class="col-total"></td>
+	    	</tr>
 	    </tbody>
 	
 	    <tbody>
@@ -117,7 +120,9 @@
     		<td th:text="${despesa.fev_nd36}"></td>
     		<td th:text="${despesa.fev_nd39}"></td>
     		<td th:text="${despesa.fev_nd40}"></td>
-    		<td th:text="${despesa.fev_nd52}"></td>    	
+    		<td th:text="${despesa.fev_nd52}"></td> 
+    		<td class="col-total"></td>
+    		</tr>
     		</tbody>
 
 	<tbody>
@@ -130,6 +135,8 @@
 		<td th:text="${despesa.mar_nd39}"></td>
 		<td th:text="${despesa.mar_nd40}"></td>
 		<td th:text="${despesa.mar_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 	
 	</tbody>
 	
@@ -143,6 +150,8 @@
 		<td th:text="${despesa.abr_nd39}"></td>
 		<td th:text="${despesa.abr_nd40}"></td>
 		<td th:text="${despesa.abr_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 		
 	</tbody>
 
@@ -156,6 +165,8 @@
 		<td th:text="${despesa.mai_nd39}"></td>
 		<td th:text="${despesa.mai_nd40}"></td>
 		<td th:text="${despesa.mai_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 		
 	</tbody>
 	
@@ -169,6 +180,8 @@
 		<td th:text="${despesa.jun_nd39}"></td>
 		<td th:text="${despesa.jun_nd40}"></td>
 		<td th:text="${despesa.jun_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 		
 	</tbody>
 	
@@ -182,6 +195,8 @@
 		<td th:text="${despesa.jul_nd39}"></td>
 		<td th:text="${despesa.jul_nd40}"></td>
 		<td th:text="${despesa.jul_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 		
 	</tbody>
 	
@@ -195,6 +210,8 @@
 		<td th:text="${despesa.ago_nd39}"></td>
 		<td th:text="${despesa.ago_nd40}"></td>
 		<td th:text="${despesa.ago_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 		
 	</tbody>
 	
@@ -208,6 +225,8 @@
 		<td th:text="${despesa.set_nd39}"></td>
 		<td th:text="${despesa.set_nd40}"></td>
 		<td th:text="${despesa.set_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 		
 	</tbody>
 	
@@ -221,6 +240,8 @@
 		<td th:text="${despesa.out_nd39}"></td>
 		<td th:text="${despesa.out_nd40}"></td>
 		<td th:text="${despesa.out_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 		
 	</tbody>
 	
@@ -234,6 +255,8 @@
 		<td th:text="${despesa.nov_nd39}"></td>
 		<td th:text="${despesa.nov_nd40}"></td>
 		<td th:text="${despesa.nov_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 		
 	</tbody>
 	
@@ -247,6 +270,8 @@
 		<td th:text="${despesa.dez_nd39}"></td>
 		<td th:text="${despesa.dez_nd40}"></td>
 		<td th:text="${despesa.dez_nd52}"></td>
+		<td class="col-total"></td>
+		</tr>
 		
 	</tbody>
 	
@@ -261,8 +286,9 @@
         <td id="total_nd39">0.00</td>
         <td id="total_nd40">0.00</td>
         <td id="total_nd52">0.00</td>
+        <td id="total_mes">0.00</td>
     </tr>
-</tfoot>
+    </tfoot>
 	
 		</table>
 	
@@ -273,6 +299,8 @@
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	
 	<script>
+	
+	
     function filtrarMes() {
         var mesSelecionado = document.getElementById("mesSelecionado").value;
 
@@ -315,11 +343,16 @@
         var totalColuna5 = 0;
         var totalColuna6 = 0;
         var totalColuna7 = 0;
+        var totalGeral = 0;
+        
+       
 
         // Percorra todas as linhas visíveis da tabela
         document.querySelectorAll("tbody tr").forEach(function (row) {
             // Adicione os valores das colunas à soma total
         	if (window.getComputedStyle(row).display !== "none") {
+        		
+        		
             totalColuna1 += parseFloat(row.cells[1].innerText) || 0;
             totalColuna2 += parseFloat(row.cells[2].innerText) || 0;
             totalColuna3 += parseFloat(row.cells[3].innerText) || 0;
@@ -327,10 +360,23 @@
             totalColuna5 += parseFloat(row.cells[5].innerText) || 0;
             totalColuna6 += parseFloat(row.cells[6].innerText) || 0;
             totalColuna7 += parseFloat(row.cells[7].innerText) || 0;
-        	}
+        	
+            	var totalLinha = 0;
+            	for (var i = 1; i <= 7; i++) {
+            		totalLinha += parseFloat(row.cells[i].innerText) || 0;
+            	}
+            	
+            	var colTotalElemento = row.querySelector(".col-total");
+            	if (colTotalElemento) {
+            		colTotalElemento.innerText = totalLinha.toFixed(2);
+            	}
+            	
+            	totalGeral += totalLinha;
+            	}
+        	
         });
 
-        // Atualize os totais no tfoot
+        // Atualiza os totais no tfoot
         document.getElementById("total_nd04").innerText = totalColuna1.toFixed(2);
         document.getElementById("total_nd30").innerText = totalColuna2.toFixed(2);
         document.getElementById("total_nd33").innerText = totalColuna3.toFixed(2);
@@ -338,9 +384,12 @@
         document.getElementById("total_nd39").innerText = totalColuna5.toFixed(2);
         document.getElementById("total_nd40").innerText = totalColuna6.toFixed(2);
         document.getElementById("total_nd52").innerText = totalColuna7.toFixed(2);
+        
+        document.getElementById("total_mes").innerText = totalGeral.toFixed(2);
+        
     }
 
-    // Chame a função sempre que necessário, por exemplo, após filtrar as linhas
+    // Chama a função sempre que necessário, por exemplo, após filtrar as linhas
     calcularSoma();
     	
 
@@ -350,7 +399,7 @@
     	    return meses[numero - 1];
     	}
     	
-    
+    	
     
     </script>
 	
