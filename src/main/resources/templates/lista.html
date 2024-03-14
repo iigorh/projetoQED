@@ -97,19 +97,25 @@
     </select>
     
     
-		<tbody>
-	    <tr class="jan" th:each="despesa : ${despesas}">
-	    	<td>ÁFRICA DO SUL</td>
-	    	<td th:text="${despesa.jan_nd04}"></td>
-	    	<td th:text="${despesa.jan_nd30}"></td>
-	    	<td th:text="${despesa.jan_nd33}"></td>
-	    	<td th:text="${despesa.jan_nd36}"></td>
-	    	<td th:text="${despesa.jan_nd39}"></td>
-	    	<td th:text="${despesa.jan_nd40}"></td>
-	    	<td th:text="${despesa.jan_nd52}"></td>
-	    	<td class="col-total"></td>
-	    	</tr>
-	    </tbody>
+    <tbody>
+    <tr class="jan" th:each="despesa : ${despesas}">
+        <td>ÁFRICA DO SUL</td>
+        <td th:text="${despesa.jan_nd04}"></td>
+        <td th:text="${despesa.jan_nd30}"></td>
+        <td th:text="${despesa.jan_nd33}"></td>
+        <td th:text="${despesa.jan_nd36}"></td>
+        <td th:text="${despesa.jan_nd39}"></td>
+        <td th:text="${despesa.jan_nd40}"></td>
+        <td th:text="${despesa.jan_nd52}"></td>
+        <td class="col-total"></td>
+        <td>
+            <button class="btn btn-primary btnEditar">Editar</button>
+            </td>
+            <td>
+            <button class="btn btn-primary btnSalvar">Salvar</button>
+        </td>
+    </tr>
+</tbody>
 	
 	    <tbody>
 	    <tr class="fev" th:each="despesa : ${despesas}">
@@ -291,6 +297,9 @@
     </tfoot>
 	
 		</table>
+		
+		
+
 	
 		
 		
@@ -299,6 +308,44 @@
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	
 	<script>
+	function enableEdit(row) {
+        // Habilita a edição dos inputs da linha
+        row.querySelectorAll("input").forEach(function(input) {
+            input.removeAttribute("disabled");
+        });
+
+        // Altera a cor do botão "Salvar" para indicar que a linha está em modo de edição
+        var saveButton = row.querySelector(".btnSalvar");
+        saveButton.classList.remove("btn-primary");
+        saveButton.classList.add("btn-success");
+    }
+
+    function disableEdit(row) {
+        // Desabilita a edição dos inputs da linha
+        row.querySelectorAll("input").forEach(function(input) {
+            input.setAttribute("disabled", true);
+        });
+
+        // Altera a cor do botão "Salvar" de volta para a cor original
+        var saveButton = row.querySelector(".btnSalvar");
+        saveButton.classList.remove("btn-success");
+        saveButton.classList.add("btn-primary");
+    }
+
+    document.querySelectorAll(".btnEditar").forEach(function(button) {
+        button.addEventListener("click", function() {
+            var row = this.closest("tr");
+            enableEdit(row);
+        });
+    });
+
+    document.querySelectorAll(".btnSalvar").forEach(function(button) {
+        button.addEventListener("click", function() {
+            var row = this.closest("tr");
+            disableEdit(row);
+        });
+    });
+	
 	
 	
     function filtrarMes() {
@@ -349,6 +396,9 @@
 
         // Percorra todas as linhas visíveis da tabela
         document.querySelectorAll("tbody tr").forEach(function (row) {
+        	
+        	
+        	
             // Adicione os valores das colunas à soma total
         	if (window.getComputedStyle(row).display !== "none") {
         		
