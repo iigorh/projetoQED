@@ -61,7 +61,7 @@
 		
 		<thead>
 	    <tr>
-	    	<td>Aditância</td>
+	    	<td>Mês</td>
 	        <th scope="col">31.90.04</th>
 	        <th scope="col">33.90.30</th>
 	        <th scope="col">33.90.33</th>
@@ -70,6 +70,7 @@
 	        <th scope="col">33.90.40</th>
 	        <th scope="col">44.90.52</th>
 	        <th scope="col">Total mês</th>
+	        <th></th>
 	    </tr>
 	</thead>
 	
@@ -99,7 +100,7 @@
     
     <tbody>
     <tr class="jan" th:each="despesa : ${despesas}">
-        <td>ÁFRICA DO SUL</td>
+        <td>Janeiro</td>
         <td th:text="${despesa.jan_nd04}"></td>
         <td th:text="${despesa.jan_nd30}"></td>
         <td th:text="${despesa.jan_nd33}"></td>
@@ -110,8 +111,6 @@
         <td class="col-total"></td>
         <td>
             <button class="btn btn-primary btnEditar">Editar</button>
-            </td>
-            <td>
             <button class="btn btn-primary btnSalvar">Salvar</button>
         </td>
     </tr>
@@ -119,7 +118,7 @@
 	
 	    <tbody>
 	    <tr class="fev" th:each="despesa : ${despesas}">
-    		<td>ÁFRICA DO SUL</td>
+    		<td>Fevereiro</td>
     		<td th:text="${despesa.fev_nd04}"></td>
     		<td th:text="${despesa.fev_nd30}"></td>
     		<td th:text="${despesa.fev_nd33}"></td>
@@ -128,12 +127,17 @@
     		<td th:text="${despesa.fev_nd40}"></td>
     		<td th:text="${despesa.fev_nd52}"></td> 
     		<td class="col-total"></td>
+    		<td>
+            <button class="btn btn-primary btnEditar">Editar</button>
+            
+            <button class="btn btn-primary btnSalvar">Salvar</button>
+        </td>
     		</tr>
     		</tbody>
 
 	<tbody>
 	<tr class="mar" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Março</td>
 		<td th:text="${despesa.mar_nd04}"></td>
 		<td th:text="${despesa.mar_nd30}"></td>
 		<td th:text="${despesa.mar_nd33}"></td>
@@ -142,13 +146,18 @@
 		<td th:text="${despesa.mar_nd40}"></td>
 		<td th:text="${despesa.mar_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 	
 	</tbody>
 	
 	<tbody>
 	<tr class="abr" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Abril</td>
 		<td data-abr-nd04 th:text="${despesa.abr_nd04}"></td>
 		<td th:text="${despesa.abr_nd30}"></td>
 		<td th:text="${despesa.abr_nd33}"></td>
@@ -157,13 +166,18 @@
 		<td th:text="${despesa.abr_nd40}"></td>
 		<td th:text="${despesa.abr_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 		
 	</tbody>
 
 	<tbody>
 	<tr class="mai" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Maio</td>
 		<td th:text="${despesa.mai_nd04}"></td>
 		<td th:text="${despesa.mai_nd30}"></td>
 		<td th:text="${despesa.mai_nd33}"></td>
@@ -172,13 +186,18 @@
 		<td th:text="${despesa.mai_nd40}"></td>
 		<td th:text="${despesa.mai_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 		
 	</tbody>
 	
 	<tbody>
 	<tr class="jun" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Junho</td>
 		<td th:text="${despesa.jun_nd04}"></td>
 		<td th:text="${despesa.jun_nd30}"></td>
 		<td th:text="${despesa.jun_nd33}"></td>
@@ -187,13 +206,18 @@
 		<td th:text="${despesa.jun_nd40}"></td>
 		<td th:text="${despesa.jun_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 		
 	</tbody>
 	
 	<tbody>
 	<tr class="jul" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Julho</td>
 		<td th:text="${despesa.jul_nd04}"></td>
 		<td th:text="${despesa.jul_nd30}"></td>
 		<td th:text="${despesa.jul_nd33}"></td>
@@ -202,13 +226,18 @@
 		<td th:text="${despesa.jul_nd40}"></td>
 		<td th:text="${despesa.jul_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 		
 	</tbody>
 	
 	<tbody>
 	<tr class="ago" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Agosto</td>
 		<td th:text="${despesa.ago_nd04}"></td>
 		<td th:text="${despesa.ago_nd30}"></td>
 		<td th:text="${despesa.ago_nd33}"></td>
@@ -217,13 +246,17 @@
 		<td th:text="${despesa.ago_nd40}"></td>
 		<td th:text="${despesa.ago_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 		
 	</tbody>
 	
 	<tbody>
 	<tr class="set" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Setembro</td>
 		<td th:text="${despesa.set_nd04}"></td>
 		<td th:text="${despesa.set_nd30}"></td>
 		<td th:text="${despesa.set_nd33}"></td>
@@ -232,13 +265,18 @@
 		<td th:text="${despesa.set_nd40}"></td>
 		<td th:text="${despesa.set_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 		
 	</tbody>
 	
 	<tbody>
 	<tr class="out" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Outubro</td>
 		<td th:text="${despesa.out_nd04}"></td>
 		<td th:text="${despesa.out_nd30}"></td>
 		<td th:text="${despesa.out_nd33}"></td>
@@ -247,13 +285,18 @@
 		<td th:text="${despesa.out_nd40}"></td>
 		<td th:text="${despesa.out_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 		
 	</tbody>
 	
 	<tbody>
 	<tr class="nov" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Novembro</td>
 		<td th:text="${despesa.nov_nd04}"></td>
 		<td th:text="${despesa.nov_nd30}"></td>
 		<td th:text="${despesa.nov_nd33}"></td>
@@ -262,13 +305,18 @@
 		<td th:text="${despesa.nov_nd40}"></td>
 		<td th:text="${despesa.nov_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 		
 	</tbody>
 	
 	<tbody>
 	<tr class="dez" th:each="despesa : ${despesas}">
-		<td>ÁFRICA DO SUL</td>
+		<td>Dezembro</td>
 		<td th:text="${despesa.dez_nd04}"></td>
 		<td th:text="${despesa.dez_nd30}"></td>
 		<td th:text="${despesa.dez_nd33}"></td>
@@ -277,6 +325,11 @@
 		<td th:text="${despesa.dez_nd40}"></td>
 		<td th:text="${despesa.dez_nd52}"></td>
 		<td class="col-total"></td>
+		<td>
+        <button class="btn btn-primary btnEditar">Editar</button>
+        
+        <button class="btn btn-primary btnSalvar">Salvar</button>
+    </td>
 		</tr>
 		
 	</tbody>
@@ -293,6 +346,7 @@
         <td id="total_nd40">0.00</td>
         <td id="total_nd52">0.00</td>
         <td id="total_mes">0.00</td>
+        <td></td>
     </tr>
     </tfoot>
 	
@@ -308,44 +362,63 @@
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	
 	<script>
-	function enableEdit(row) {
-        // Habilita a edição dos inputs da linha
-        row.querySelectorAll("input").forEach(function(input) {
-            input.removeAttribute("disabled");
-        });
-
-        // Altera a cor do botão "Salvar" para indicar que a linha está em modo de edição
-        var saveButton = row.querySelector(".btnSalvar");
-        saveButton.classList.remove("btn-primary");
-        saveButton.classList.add("btn-success");
-    }
-
-    function disableEdit(row) {
-        // Desabilita a edição dos inputs da linha
-        row.querySelectorAll("input").forEach(function(input) {
-            input.setAttribute("disabled", true);
-        });
-
-        // Altera a cor do botão "Salvar" de volta para a cor original
-        var saveButton = row.querySelector(".btnSalvar");
-        saveButton.classList.remove("btn-success");
-        saveButton.classList.add("btn-primary");
-    }
-
-    document.querySelectorAll(".btnEditar").forEach(function(button) {
-        button.addEventListener("click", function() {
-            var row = this.closest("tr");
-            enableEdit(row);
-        });
-    });
-
-    document.querySelectorAll(".btnSalvar").forEach(function(button) {
-        button.addEventListener("click", function() {
-            var row = this.closest("tr");
-            disableEdit(row);
-        });
-    });
 	
+	function enableEdit(row) {
+	    // Habilita a edição dos inputs da linha, exceto na primeira e última coluna
+		row.querySelectorAll("td:not(:first-child):not(:last-child):not(:nth-last-child(2)):not(.col-total)").forEach(function(cell) {
+
+	        if (!cell.querySelector("input")) {
+	            var value = cell.innerText;
+	            cell.innerHTML = `<input type="text" value="${value}">`;
+	        }
+	    });
+
+	    // Altera a cor do botão "Salvar" para indicar que a linha está em modo de edição
+	    var saveButton = row.querySelector(".btnSalvar");
+	    saveButton.classList.remove("btn-primary");
+	    saveButton.classList.add("btn-success");
+	}
+
+	function disableEdit(row) {
+	    // Desabilita a edição dos inputs da linha, exceto na primeira e última coluna
+	    row.querySelectorAll("td:not(:first-child):not(:last-child)").forEach(function(cell) {
+	        var input = cell.querySelector("input");
+	        if (input) {
+	            cell.innerText = input.value;
+	        }
+	    });
+
+	    // Altera a cor do botão "Salvar" de volta para a cor original
+	    var saveButton = row.querySelector(".btnSalvar");
+	    saveButton.classList.remove("btn-success");
+	    saveButton.classList.add("btn-primary");
+	}
+
+	document.querySelectorAll(".btnEditar").forEach(function(button) {
+	    button.addEventListener("click", function() {
+	        var row = this.closest("tr");
+	        enableEdit(row);
+	        row.querySelector(".btnSalvar").style.display = "inline-block";
+	    });
+	});
+
+	document.querySelectorAll(".btnSalvar").forEach(function(button) {
+	    button.addEventListener("click", function() {
+	        var row = this.closest("tr");
+	        
+	        var rowData = {
+	        		
+	        }
+	        var confirmacao = confirm("Tem certeza que deseja salvas as alterações?")
+	        		if (confirmacao) {
+	        			 disableEdit(row);
+	        		        this.style.display = "none";
+	        		        calcularSoma(); // Atualiza a soma ao salvar a edição
+	        		}
+	       
+	    });
+	});
+
 	
 	
     function filtrarMes() {

@@ -41,7 +41,7 @@ background-color:#2d2d30;
   padding: 40px;
   margin-top: 100px;
   width: 80%; 
-  height: 750px; 
+   
   color: #fff;
 }
 .botaoCadastrarQEDinicio{
@@ -75,6 +75,7 @@ background-color:#2d2d30;
   margin-left 0px;
   left: 25% ;
   position: relative;
+  
 
 }
 
@@ -97,8 +98,11 @@ background-color:#2d2d30;
 	  border: none; 
 	  text-align: center;
 	  font-weight: bold; 
-	  width: 150px;
-	  height: 150px;
+	  
+}
+
+.btnSalvar{
+	display: none;
 }
 
 .btn-danger{ 
@@ -153,6 +157,34 @@ table {
 	gap: 15px;
 	
 }
+
+
+
+
+
+/*  inputs domodo de edição de valores da lista*/
+td input {
+    border: 2px solid #ccc; /* Adiciona uma borda cinza */
+    padding: 5px; /* Adiciona um espaçamento interno */
+    font-size: 14px; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    width: 65px;
+    border-radius: 20px; 
+    text-align: center;
+}
+
+/* Estilo para os inputs em modo de edição quando estão em foco */
+td input:focus {
+    border-color: #fa6607; /*cor da borda durante edição*/
+    outline: none; /* Remove a borda de foco padrão */
+}
+
+/* Estilo para os inputs em modo de edição quando estão desabilitados */
+td input:disabled {
+    background-color: #f8f9fa; /* Muda a cor de fundo para cinza claro */
+    cursor: not-allowed; /* Altera o cursor para indicar que não está disponível para interação */
+}
+
 
 
 
