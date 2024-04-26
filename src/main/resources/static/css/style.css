@@ -2,7 +2,6 @@
 
 
 * {
- 
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   color: #ededed;
@@ -44,9 +43,18 @@ background-color:#2d2d30;
    
   color: #fff;
 }
+
+.destaque-mes {
+	
+    background-color: #035ea8; /* Cor de fundo de destaque (vermelho claro) */
+    padding: 3px; /* Espaçamento interno para melhorar a aparência */
+    border-radius: 10px; /* Cantos arredondados para suavizar a aparência */
+}
+
+
 .botaoCadastrarQEDinicio{
-  background-color: #fff; 
-  color: #252526; 
+  background-color: #035ea8; 
+  color: #ffff; 
   border-radius: 20px; 
   padding: 10px 20px; 
   border: none; 
